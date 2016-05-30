@@ -10,6 +10,7 @@
     <!--[if lte IE 8]>
     <link href=<?=base_url().'views/common/IE.css'?> rel="stylesheet" type="text/css">
     <script src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -18,9 +19,7 @@
 <div class="video-wrap">
     <div class="video">
         <div class="video-box">
-            <video src=<?=base_url().'views/video/video/test.mp4'?> controls="controls">
-                您的浏览器不支持 video 标签，请更新浏览器。
-            </video>
+            <video src=<?=base_url().'views/video/video/test3.mp4' ?> controls="controls" id="video"></video>	
         </div>
         <div class="video-list">
             <h1>相关视频</h1>
@@ -28,26 +27,26 @@
             <ul>
                 <li>
                     <div class="list-item">
-                        <a href="#">
+                        <button data-src=<?=base_url().'views/video/video/test1.mp4' ?>>
                             <img src=<?=base_url().'views/common/img/list-item1.jpg'?>>
                             <span>视频1</span>
-                        </a>
+                        </button>
                     </div>
                 </li>
                 <li>
                     <div class="list-item">
-                        <a href="#">
+                        <button data-src=<?=base_url().'views/video/video/test2.mp4' ?>>
                             <img src=<?=base_url().'views/common/img/list-item2.jpg'?>>
                             <span>视频2</span>
-                        </a>
+                        </button>
                     </div>
                 </li>
                 <li>
                     <div class="list-item">
-                        <a href="#">
+                        <button data-src=<?=base_url().'views/video/video/test3.mp4' ?>>
                             <img src=<?=base_url().'views/common/img/list-item3.jpg'?>>
                             <span>视频3</span>
-                        </a>
+                        </button>
                     </div>
                 </li>
                 <b class="clear-float"></b>
@@ -59,8 +58,9 @@
 <div class="comment">
     <h1>评论</h1>
     <p class="subTitle">comment</p>
-    <form action="video/addComment" method="post">
+    <form action="video/addComment" method="post" id="video-comment-form">
         <textarea rows="4" cols="100" id="comment-submit" name="comment" ></textarea>
+        <span class="comment-msg"></span>
         <input type="submit" value="提交评论" />
     </form>
     <div class="comment-box">
@@ -84,7 +84,5 @@
 <!-- 页脚 -->
 <?=$infoFooter;?>
 <script src=<?=base_url().'views/video/video.js'?>></script>
-<!--让IE8支持媒体查询-->
-<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
 </body>
 </html>

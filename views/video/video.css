@@ -7,18 +7,6 @@
     padding:0;
 }
 
-/*导航栏*/
-.nav .nav-video{
-    background-color:#efebf8;
-    border-bottom:4px solid #5BAEFF;
-    border-radius: 8px;
-}
-.nav li a[class=nav-video]:hover,
-.nav li a[class=nav-video]:focus,
-.nav li a[class=nav-video]:active{
-    color:#333;
-}
-
 .video-wrap{
     padding:1em 0;
     position: relative;
@@ -43,6 +31,14 @@
     border:2px solid #7A94A1;
     border-radius:5px;    background-color: #7A94A1;
 }
+
+.video-box iframe{
+    height:100%;
+    width: 100%;
+    border:2px solid #7A94A1;
+    border-radius:5px;    background-color: #7A94A1;
+}
+
 
 .video-list{
     position: relative;
@@ -80,6 +76,18 @@
     padding:.5em 0.5em;
     margin:1em .5em .5em .5em;
     border:1px solid #999;
+}
+
+.list-item{
+    background-color: #DDD;
+}
+
+.list-item button{
+    background-color: none;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+
 }
 
 .list-item img{
@@ -126,9 +134,17 @@
     line-height: 18px;
     margin:1em auto .5em auto;
     padding:.3em;
-    border:1px solid #ccc;
+    border:1px solid #CCC;
+    outline-width: 0;
+    outline-color: #C39192;
 }
 
+.comment .comment-msg{
+    color: #9a2e2e;
+    font-family: "Kaiti";
+    margin-right:5px;
+    font-size:14px;
+}
 
 .comment form input{
     margin-right:15%;
@@ -256,7 +272,7 @@
     .comment-box, .comment textarea{
         width:90%;
     }
-    .comment input{
+    .comment form input{
         margin-right:5%;
     }
 
